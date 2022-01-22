@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Application</title>
+</head>
+<body>
+    <h1>Hello in Flask</h1>
+
+    <div>
+        <form action="{{ url_for('predict')}}"method="post">
+            <label for="age">Age</label>
+            <input type="text" id="age" name="age" >
+            <br>
+            <label for="Height">Height</label>
+            <input type="text" id="height" name="height">
+            <br>
+            <label for="Weight">Weight</label>
+            <input type="text" id="weight" name="weight">
+            <br>
+            <label for="bmr">BMR</label>
+            <input type="text" id="bmr" name="bmr">
+            <br>
+            <label for="pal">PAL</label>
+            <input type="text" id="pal" name="pal">
+            <br>
+            <label for="bmi">BMI</label>
+            <input type="text" id="bmi" name="bmi">
+            <br>
+            <label for="tee">TEE</label>
+            <input type="text" id="tee" name="tee" >
+            <br>
+            <label for="disease">Disease</label>
+            <input type="text" id="disease" name="disease" >
+            <br>
+            
+
+<!--             
+    <label for="w_class">Select Disease</label>
+    <select id="w_class" name="w_class">
+      <option >1</option>
+      <option >2</option>
+      <option >3</option>
+      <option >4</option>
+    </select>   
+    <br> -->
+    <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>  
+        </form>
+
+        <br>
+        <br>
+        {{ prediction_text }}
+        </div>
+</body>
+</html>
+
